@@ -1,0 +1,26 @@
+{
+  "name": "rateyouralbum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/mysql": "^2.15.18",
+    "@types/node": "^15.12.4",
+    "@types/react": "^17.0.11",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/skwogus98/RateYourAlbum.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skwogus98/RateYourAlbum/issues"
+  },
+  "homepage": "https://github.com/skwogus98/RateYourAlbum#readme"
+}

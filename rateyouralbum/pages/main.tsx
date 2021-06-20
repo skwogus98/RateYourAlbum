@@ -4,7 +4,7 @@ import axios from 'axios';
 export default function main() {
 	return (
 		<div>
-			<login />
+			<GunplaTable />
 		</div>
 		
 	)
@@ -51,20 +51,6 @@ const login = () => {
 }
 
 const GunplaTable = () => {
-	const [units, setUnits] = useState([])
-	
-	const fetchGunpla = async () => {
-		try {
-			const res = await axios.get('https://react-gunpladb-bajus.run.goorm.io/api/gunpla')
-			setUnits(res.data)
-		} catch (err) {
-			console.log(err)
-		}
-	}
-	
-	useEffect(() => {
-		fetchGunpla()
-	}, [])
 	
 	return (
 		<table>
@@ -76,16 +62,6 @@ const GunplaTable = () => {
 				<th>설명</th>
 				<th>박스아트</th>
 			</tr>
-			{units.map((unit, index) => 
-				<tr key={index}>
-					<td>{unit.filename}</td>
-					<td>{unit.name}</td>
-					<td>{unit.model}</td>
-					<td>{unit.grade}</td>
-					<td>{unit.description}</td>
-					<td ><img src={unit.boxart} className='boxart'/></td>
-				</tr>
-			)}
 		</table>
 	)
 }

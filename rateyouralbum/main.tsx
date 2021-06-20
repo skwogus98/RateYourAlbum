@@ -25,11 +25,12 @@ const login = () => {
         }, [])
         
         return (
-			{units.map((unit, index) => 
+			
 				<div class="userName">
+					{units.map((unit, index) => 
 					{unit.nickname}
+					)}
 				</div>
-			)}
         )
     }
 

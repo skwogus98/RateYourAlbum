@@ -11,23 +11,21 @@ export default function main() {
 }
 
 const LoginWindow = () => {
+	const [units, setUnits] = useState([])
+	const fetchUser = async () => {
+		try {
+			const res = await axios.get('https://rateyouralbum-txdil.run.goorm.io/api/user')
+			setUnits(res.data)
+		} catch (err) {
+			console.log(err)
+		}
+	}
 	
+	useEffect(() => {
+		fetchUser()
+	}, [])
+
     const loginClick = () => {
-        const [units, setUnits] = useState([])
-        
-        const fetchUser = async () => {
-            try {
-                const res = await axios.get('https://https://rateyouralbum-txdil.run.goorm.io/api/user')
-                setUnits(res.data)
-            } catch (err) {
-                console.log(err)
-            }
-        }
-        
-        useEffect(() => {
-            fetchUser()
-        }, [])
-        
         return (
 			
 				<div class="userName">
@@ -42,27 +40,17 @@ const LoginWindow = () => {
         <div class="login">
             <label id="login">ID</label>
             <input type="text" placeholder="id"></input>
-            <button id="loginButton" onclick={loginClick}>로그인</button>
+            <button onClick={loginClick} id="loginButton">로그인</button>
             <br />
             <label id="login">password</label>
             <input type="text" placeholder="password"></input>
             <button id="loginButton">회원가입</button>
+			<div class="userName">
+					{units.map((unit, index) => 
+					{unit.nickname}
+					)}
+			</div>
         </div>
+		
     );
-}
-
-const GunplaTable = () => {
-	
-	return (
-		<table>
-			<tr>
-				<th>이미지</th>
-				<th>이름</th>
-				<th>모델</th>
-				<th>등급</th>
-				<th>설명</th>
-				<th>박스아트</th>
-			</tr>
-		</table>
-	)
 }

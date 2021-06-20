@@ -6,12 +6,11 @@ export default function main() {
 		<div>
 			<LoginWindow />
 		</div>
-		
 	)
 }
 
 const LoginWindow = () => {
-<<<<<<< HEAD
+
 	const [units, setUnits] = useState([])
 	const fetchUser = async () => {
 		try {
@@ -26,9 +25,6 @@ const LoginWindow = () => {
 		fetchUser()
 	}, [])
 
-=======
-	
->>>>>>> e4925c129ccb4c0c83952b99c9f06ba016e098bb
     const loginClick = () => {
         return (
 			
@@ -50,9 +46,9 @@ const LoginWindow = () => {
             <input type="text" placeholder="password"></input>
             <button id="loginButton">회원가입</button>
 			<div class="userName">
-					{units.map((unit, index) => 
-					{unit.nickname}
-					)}
+				{units.map((unit, index) => 
+				{unit.nickname}
+				)}
 			</div>
         </div>
 		

@@ -3,7 +3,10 @@ import axios from 'axios';
 
 export default function main() {
 	return (
-		<login />
+		<div>
+			<login />
+		</div>
+		
 	)
 }
 

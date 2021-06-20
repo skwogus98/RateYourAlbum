@@ -11,6 +11,7 @@ export default function main() {
 }
 
 const LoginWindow = () => {
+<<<<<<< HEAD
 	const [units, setUnits] = useState([])
 	const fetchUser = async () => {
 		try {
@@ -25,6 +26,9 @@ const LoginWindow = () => {
 		fetchUser()
 	}, [])
 
+=======
+	
+>>>>>>> e4925c129ccb4c0c83952b99c9f06ba016e098bb
     const loginClick = () => {
         return (
 			

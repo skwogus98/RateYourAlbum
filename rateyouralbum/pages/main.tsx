@@ -4,13 +4,14 @@ import axios from 'axios';
 export default function main() {
 	return (
 		<div>
-			<GunplaTable />
+			<LoginWindow />
 		</div>
 		
 	)
 }
 
-const login = () => {
+const LoginWindow = () => {
+	
     const loginClick = () => {
         const [units, setUnits] = useState([])
         
